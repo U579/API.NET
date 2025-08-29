@@ -1,5 +1,5 @@
 namespace Domain.Repositories{
-    public interface IRepositoryClient{
+    public interface IUserRepository{
         Task<IEnumerable<Cliente>> GetAllAsync();
         Task<Cliente?> GetByIdAsync(Guid id);
         Task AddAsync(Cliente cliente);
