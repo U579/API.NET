@@ -31,16 +31,16 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(User user)
+        public async Task<IActionResult> Create([FromBody] User user)
         {
             await _createUser.ExecuteAsync(user);
             return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, User user)
+        public async Task<IActionResult> Update(Guid id, [FromBody] User user)
         {
-            if (id != user.Id) return BadRequest();
+            if (id != user.Id) return BadRequest("El ID de la URL no coincide con el del cuerpo.");
             await _updateUser.ExecuteAsync(user);
             return NoContent();
         }
