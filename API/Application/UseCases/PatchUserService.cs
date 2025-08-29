@@ -1,18 +1,11 @@
+using Domain.Entities;
+using Domain.Repositories;
+
 namespace Application.UseCases
 {
-    public class PatchUserService
+    public class PatchUserService(IUserRepository repository)
     {
-        private readonly IUserRepository _repository;
-
-        public PatchUserService(IUserRepository repository)
-        {
-            _repository = repository;
-        }
-
-        public PatchUserService(IUserRepository repository)
-        {
-            _repository = repository;
-        }
+        private readonly IUserRepository _repository = repository;
 
         public async Task<bool> ExecuteAsync(Guid id, Dictionary<string, object> updates)
         {

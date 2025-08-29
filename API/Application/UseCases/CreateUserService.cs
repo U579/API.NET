@@ -1,11 +1,16 @@
-namespace Application.UseCases{
-    public class CreateUserService(IRepositoryClient repository)
-    {
-        private readonly IRepositoryClient _repository = repository;
+using Domain.Entities;
+using Domain.Repositories;
 
-        public async Task ExecuteAsync(Cliente cliente)
+
+namespace Application.UseCases
+{
+    public class CreateUserService(IUserRepository repository)
+    {
+        private readonly IUserRepository _repository = repository;
+
+        public async Task ExecuteAsync(User user)
         {
-            await _repository.AddAsync(cliente);
+            await _repository.AddAsync(user);
         }
     }
 }

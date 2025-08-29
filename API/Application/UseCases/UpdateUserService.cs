@@ -1,3 +1,6 @@
+using Domain.Entities;
+using Domain.Repositories;
+
 namespace Application.UseCases
 {
     public class UpdateUserService(IUserRepository repository)

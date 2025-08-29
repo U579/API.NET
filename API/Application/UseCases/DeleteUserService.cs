@@ -1,3 +1,5 @@
+using Domain.Repositories;
+
 namespace Application.UseCases
 {
     public class DeleteUserService(IUserRepository repository)

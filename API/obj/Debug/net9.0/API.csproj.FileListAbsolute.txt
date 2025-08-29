@@ -42,3 +42,6 @@ C:\Users\mgrom\Documents\Proyectos web\API.NET\API\obj\Debug\net9.0\refint\API.d
 C:\Users\mgrom\Documents\Proyectos web\API.NET\API\obj\Debug\net9.0\API.pdb
 C:\Users\mgrom\Documents\Proyectos web\API.NET\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\mgrom\Documents\Proyectos web\API.NET\API\obj\Debug\net9.0\ref\API.dll
+C:\Users\mgrom\Documents\Proyectos web\API.NET\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mgrom\Documents\Proyectos web\API.NET\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mgrom\Documents\Proyectos web\API.NET\API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

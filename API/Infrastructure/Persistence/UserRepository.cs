@@ -1,3 +1,7 @@
+using Domain.Entities;
+using Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 namespace Infrastructure.Persistence
 {
     public class UserRepository(AppDbContext context) : IUserRepository
@@ -25,7 +29,7 @@ namespace Infrastructure.Persistence
         public async Task DeleteAsync(Guid id)
         {
             var user = await _context.Users.FindAsync(id);
-            
+
             if (user != null)
             {
                 _context.Users.Remove(user);

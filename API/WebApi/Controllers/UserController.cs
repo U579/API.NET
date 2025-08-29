@@ -1,3 +1,7 @@
+using Application.UseCases;
+using Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
+
 namespace WebApi.Controllers
 {
     [ApiController]
