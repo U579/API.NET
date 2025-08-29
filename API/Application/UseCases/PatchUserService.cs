@@ -7,6 +7,18 @@ namespace Application.UseCases
     {
         private readonly IUserRepository _repository = repository;
 
+        /// <summary>
+        /// Asynchronously updates specified fields of a user entity identified by the given <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The unique identifier of the user to update.</param>
+        /// <param name="updates">
+        /// A dictionary containing the fields to update and their new values. 
+        /// Supported keys are "name", "email", and "phone".
+        /// </param>
+        /// <returns>
+        /// A task that represents the asynchronous operation. 
+        /// The task result contains <c>true</c> if the user was found and updated; otherwise, <c>false</c>.
+        /// </returns>
         public async Task<bool> ExecuteAsync(Guid id, Dictionary<string, object> updates)
         {
             var user = await _repository.GetByIdAsync(id);
