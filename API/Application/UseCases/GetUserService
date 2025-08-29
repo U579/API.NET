@@ -1,0 +1,13 @@
+namespace Application.UseCases
+{
+    public class GetUserService(IUserRepository repository)
+    {
+        private readonly IUserRepository _repository = repository;
+
+        public async Task<IEnumerable<User>> GetAllAsync() =>
+            await _repository.GetAllAsync();
+
+        public async Task<User?> GetByIdAsync(Guid id) =>
+            await _repository.GetByIdAsync(id);
+    }
+}
